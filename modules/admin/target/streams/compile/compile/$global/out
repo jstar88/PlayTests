@@ -1,0 +1,11 @@
+[info] Compiling 4 Scala sources and 3 Java sources to C:\Users\nicola\git\heroku\MyApp\modules\admin\target\scala-2.10\classes...
+[error] C:\Users\nicola\git\heroku\MyApp\modules\admin\conf\admin.routes:3: value at is not a member of object controllers.admin.Assets
+[error] GET     /assets/*file               controllers.admin.Assets.at(path="/public", file)
+[error] C:\Users\nicola\git\heroku\MyApp\modules\admin\conf\admin.routes:3: value at is not a member of object controllers.admin.Assets
+[error] GET     /assets/*file               controllers.admin.Assets.at(path="/public", file)
+[error] C:\Users\nicola\git\heroku\MyApp\modules\admin\app\views\main.scala.html:8: not enough arguments for method at: (path: String, file: String)play.api.mvc.Action[play.api.mvc.AnyContent].
+[error] Unspecified value parameter file.
+[error]         <link rel="stylesheet" media="screen" href="@controllers.admin.Assets.delegate.at("stylesheets/main.css")">
+[error]                                                                                          ^
+[error] three errors found
+[error] (MyApp-admin/compile:compile) Compilation failed
