@@ -11,28 +11,31 @@ object ApplicationBuild extends Build {
 
   val appName         = "MyApp"
   val appVersion      = "1.0-SNAPSHOT"
-
-// ------- admin ------------
-	val adminDeps = Seq(
-      // Add your project dependencies here,
-    	javaCore,
-    	javaJdbc,
-    	javaEbean
-    )
   
-   lazy val admin = play.Project(appName + "-admin", appVersion, adminDeps, path = file("modules/admin"))
+  
+// ------- admin ------------
 
-// -------
+    val adminDeps = Seq(
+      // Add your project dependencies here,
+       "mysql" % "mysql-connector-java" % "5.1.18",
+      jdbc,
+      anorm
+    )
+    
+    lazy val admin = play.Project(appName + "-admin", appVersion, adminDeps, path = file("modules/admin"))
+
+  
+
 // ------- main ------------
 
-	val mainDeps = Seq(
+	val appDependencies  = Seq(
     	// Add your project dependencies here,
     	javaCore,
     	javaJdbc,
     	javaEbean
   )
-  lazy  val main = play.Project(appName, appVersion, mainDeps).settings(
-      // Add your own project settings here      
-    ).dependsOn(admin).aggregate(admin)
+ lazy val main = play.Project(appName, appVersion, appDependencies).settings(
+  ).dependsOn(admin).aggregate(admin)
 // -------
+
 }
