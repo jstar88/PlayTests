@@ -1,8 +1,7 @@
 PlayTests
 =========
 
-### Current problem:
-problems solved:
+### Solved problems:
 
 * automatic routing on new modules
 * automatic modules aggregation
