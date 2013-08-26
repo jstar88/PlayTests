@@ -5,8 +5,8 @@ PlayTests
 
 * automatic routing on new modules
 * automatic modules aggregation
-
+* sharing models between common and main app.
 
 ### Current problem:
 
-seems impossible to use models inside modules from common or main app.
+To much connections to database, dev mode
