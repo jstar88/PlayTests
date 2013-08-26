@@ -3,7 +3,7 @@ package authentication.controllers;
 import play.*;
 import play.mvc.*;
 
-import views.html.*;
+import authentication.views.html.*;
 import play.data.*;
 import common.models.*;
 import common.services.*;

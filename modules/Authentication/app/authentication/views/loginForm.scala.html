@@ -1,11 +1,11 @@
-@(loginForm: Form[Login])
+@(loginForm: Form[common.models.Login])
 
 @import helper._
 @import helper.twitterBootstrap._
 
 @main("") {
         
-        @helper.form(routes.Authentication.authenticate) {
+        @helper.form(authentication.controllers.routes.Authentication.authenticate) {
             
             <h1>Sign in</h1>
             

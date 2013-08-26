@@ -1,11 +1,11 @@
-@(signupForm: Form[User])
+@(signupForm: Form[common.models.User])
 
 @import helper._
 @import helper.twitterBootstrap._
 
 @main("") {
     
-    @helper.form(routes.Registration.registers) {
+    @helper.form(authentication.controllers.routes.Registration.registers) {
         
         @if(signupForm.hasGlobalErrors) {
                 <p class="error">
@@ -42,7 +42,7 @@
             
             @select(
                 signupForm("profile.country"),
-                options = options(Countries.list),
+                options = options(common.models.Countries.list),
                 '_default -> "--- Choose a country ---",
                 '_label -> "Country",
                 '_error -> signupForm("profile.country").error.map(_.withMessage("Please select your country"))

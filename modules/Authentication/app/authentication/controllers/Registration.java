@@ -3,7 +3,7 @@ package authentication.controllers;
 import play.*;
 import play.mvc.*;
 import java.util.*;
-import views.html.*;
+import authentication.views.html.*;
 import play.data.*;
 import play.data.validation.ValidationError;
 import static play.data.Form.*;
